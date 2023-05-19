@@ -1,10 +1,6 @@
-def get_maximum():
-    celsius = [14, 15.1, 12.3]
-    maximum = max(celsius)
-    return  maximum
+import math
+import random
 
-
-celsius = get_maximum()
-
-fahrenheit = celsius * 1.8 + 32
-print(fahrenheit)
+lower_number = int(input("Enter the lower bound: "))
+upper_number = int(input("Enter the upper bound: "))
+print(random.randint(lower_number, upper_number))

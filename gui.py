@@ -1,6 +1,12 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
+
+# Create file if it isn't exist
+if not os.path.exists(functions.FILE_PATH):
+    with open(functions.FILE_PATH, 'w') as file:
+        pass
 
 sg.theme("dark")
 now = sg.Text("", key="clock")
@@ -18,7 +24,7 @@ layout = [[now],
           [list_box, edit_button, complete_button],
           [exit_button]]
 
-window = sg.Window('My To-Do App',
+window = sg.Window('What do you want to do?',
                    layout=layout,
                    font=('Helvetica', 14))
 while True:
